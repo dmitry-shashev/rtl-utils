@@ -1,8 +1,8 @@
-import '@testing-library/jest-dom/jest-globals'
+import '@testing-library/jest-dom/vitest'
 import { fireEvent, waitFor } from '@testing-library/react'
 import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { expect } from '@jest/globals'
+import { expect } from 'vitest'
 
 export async function textNotInTheDocument(text: string): Promise<void> {
   const re = new RegExp(text)
