@@ -2,6 +2,8 @@
 
 Utils for React Testing Library
 
+Developed for `Vitest` only
+
 ## Install
 
 For `npm`
