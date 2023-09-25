@@ -4,7 +4,7 @@
     "type": "git",
     "url": "https://github.com/dmitry-shashev/rtl-utils"
   },
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "React testing library utils",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
@@ -14,6 +14,12 @@
     "build": "tsc",
     "prettier-format": "prettier --write . && git add --all",
     "lint": "eslint src"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "types": "./dist/esm/index.d.ts"
+    }
   },
   "files": [
     "dist"
