@@ -1,0 +1,59 @@
+{
+  "name": "rtl-utils",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dmitry-shashev/rtl-utils"
+  },
+  "version": "0.0.3",
+  "description": "React testing library utils",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "scripts": {
+    "prepare": "husky install",
+    "prebuild": "shx rm -rf dist",
+    "build": "tsc",
+    "prettier-format": "prettier --write . && git add --all",
+    "lint": "eslint src"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18.17.1",
+    "pnpm": ">=8.7.4"
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true,
+    "bracketSpacing": true
+  },
+  "packageManager": "pnpm@8.7.4",
+  "keywords": [
+    "RTL"
+  ],
+  "author": {
+    "name": "Dmitry",
+    "email": "dy.shashev@gmail.com",
+    "url": "https://github.com/dmitry-shashev"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@jest/globals": "29.7.0",
+    "@testing-library/jest-dom": "6.1.3",
+    "@testing-library/react": "14.0.0",
+    "@testing-library/user-event": "14.5.1",
+    "@types/jest": "29.5.5",
+    "@typescript-eslint/eslint-plugin": "6.5.0",
+    "@typescript-eslint/parser": "6.5.0",
+    "eslint": "8.48.0",
+    "eslint-config-prettier": "9.0.0",
+    "husky": "8.0.3",
+    "prettier": "3.0.3",
+    "shx": "0.3.4",
+    "typescript": "5.2.2",
+    "typescript-eslint": "0.0.1-alpha.0"
+  }
+}
