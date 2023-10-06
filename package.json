@@ -4,7 +4,7 @@
     "type": "git",
     "url": "https://github.com/dmitry-shashev/rtl-utils"
   },
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "React testing library utils",
   "main": "dist/esm/index.js",
   "module": "dist/esm/index.js",
