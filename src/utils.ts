@@ -138,6 +138,25 @@ export async function checkboxValueByTestId(
   })
 }
 
+export async function checkboxValueByAriaLabel(
+  ariaLabel: string,
+  value: boolean,
+  position = 0
+): Promise<void> {
+  const elements = screen.getAllByLabelText(ariaLabel)
+  const elem = elements[position]
+  if (!elem) {
+    throw new Error('Checkbox was not found')
+  }
+  await waitFor(() => {
+    if (value) {
+      expect(elem).toBeChecked()
+    } else {
+      expect(elem).not.toBeChecked()
+    }
+  })
+}
+
 export function clickByAriaLabel(
   ariaLabel: string,
   position = 0
