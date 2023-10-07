@@ -60,6 +60,22 @@ export async function ariaLabelNotContainText(
   })
 }
 
+export async function ariaLabelHasDataAttribute(
+  ariaLabel: string,
+  dataAttributeName: string,
+  dataAttributeValue: string,
+  position = 0
+): Promise<void> {
+  const elements = screen.getAllByLabelText(ariaLabel)
+  const elem = elements[position]
+  if (!elem) {
+    throw new Error('Element was not found')
+  }
+  await waitFor(() => {
+    expect(elem.dataset[dataAttributeName]).toBe(dataAttributeValue)
+  })
+}
+
 export async function ariaLabelIsVisible(ariaLabel: string): Promise<void> {
   const elem = screen.getByLabelText(ariaLabel)
   await waitFor(() => {
